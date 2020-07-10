@@ -1,4 +1,29 @@
+body {
+
+}
+
 div {
-    /* remove outline later!!!!*/
+    font-size: 0;
+}
+
+.grid-container {
+    display: ;
+    margin: auto;
+    width: 500px;
+    height: 500px;
     outline: 1px solid black;
+}
+
+.box {
+    display: inline-block;
+    vertical-align: top;
+    background: ;
+    height: ;
+    width: ;
+}
+
+.exp-div {
+    height: 100px;
+    width: 100px;
+    background: yellow;
 }
