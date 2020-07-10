@@ -1,6 +1,7 @@
 let gridWidth
 let boxAmount
 let eachBox
+let randomRBG
 
 const makeGridBtn = document.querySelector('.make-grid')
 makeGridBtn.addEventListener('click', makeGrid);
@@ -12,6 +13,9 @@ clearBtn.addEventListener('click', gridRemove);
 
 const eraseBtn = document.querySelector('.erase')
 eraseBtn.addEventListener('click', makeWhite);
+
+const colorBtn = document.querySelector('.colorful')
+colorBtn.addEventListener('click', colorful);
 
 function makeGrid() {
     gridRemove();
@@ -40,15 +44,13 @@ function assignBoxes () {
 
 function makeBlack () {
     for (i = 0; i < eachBox.length; i++) {
-        console.log (i)
-        eachBox[i].onmouseenter = function () { this.style.background = 'black'}
+        eachBox[i].onmouseover = function () { this.style.background = 'black'}
     }
 };
 
 function makeWhite () {
     for (i = 0; i < eachBox.length; i++) {
-        console.log (i)
-        eachBox[i].onmouseenter = function () { this.style.background = 'white'}
+        eachBox[i].onmouseover = function () { this.style.background = 'white'}
     }  
 }
 
@@ -69,7 +71,21 @@ function gridRemove () {
     }
 }
 
+function randomColor () {
+    let randomR = Math.floor(Math.random() * 256);
+    let randomB = Math.floor(Math.random() * 256);
+    let randomG = Math.floor(Math.random() * 256);
+    randomRBG = 'rgb(' + randomR + ' ,' + randomB + ' ,' + randomG + ')';
+    return randomRBG;
+}
 
+function colorful () {
+    for (i = 0; i < eachBox.length; i++) {
+        eachBox[i].onmouseover = function () {
+            randomColor ();
+            this.style.background = randomRBG}
+    }
+};
 
 const expDiv = document.querySelector('.exp-div');
 expDiv.addEventListener('mouseover', fart);
