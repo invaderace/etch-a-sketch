@@ -5,7 +5,6 @@ let randomRBG
 let blackR = 255;
 let blackB = 255;
 let blackG = 255;
-let blackRGB = 'rgb(' + blackR + ' ,' + blackG + ' ,' + blackB + ')';
 let nowOpacity;
 
 const makeGridBtn = document.querySelector('.make-grid')
@@ -75,7 +74,6 @@ function getNumber () {
     if (isNaN(gridWidth) || gridWidth == null || gridWidth == '' || gridWidth < 0) {
         alert('That is not a valid response, please try again.');
     }
-
     return gridWidth;
 }
 
