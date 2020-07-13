@@ -1,13 +1,12 @@
 body {
-
+    text-align: center;
 }
 
-div {
-    font-size: 0;
+#buttons {
+    margin: 2em;
 }
 
 .grid-container {
-    display: ;
     margin: auto;
     width: 500px;
     height: 500px;
@@ -17,13 +16,6 @@ div {
 .box {
     display: inline-block;
     vertical-align: top;
-    background: ;
     height: ;
     width: ;
-}
-
-.exp-div {
-    height: 100px;
-    width: 100px;
-    background: yellow;
 }
